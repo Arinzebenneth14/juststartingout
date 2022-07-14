@@ -10,7 +10,7 @@ nav{
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 20px 10px;
+padding: 20px 10%;
 
 }
 #logo{
@@ -38,4 +38,74 @@ nav button{
 nav button:hover {
     box-shadow: 0 0 15px 10px orange;
     transform: scale (1.1);
+}
+.hero{
+    padding: 20px 10%;
+    display: flex;
+    gap: 20px;
+}
+.hero :is(figure, .cta) {
+    flex: 1;
+}
+
+.hero figure {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.hero figure .image {
+    background-color: black;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    justify-self: end;
+
+
+}
+.hero figure .image:hover {
+    animation: pulse 3s infinite alternate ;
+}
+figure .image:nth-child(2){
+top: -20px;
+    justify-self: start;
+}
+.hero figure .image:nth-child(4){
+top: -20px;
+    justify-self: start;
+}
+.hero .cta {
+    padding: 0px 20px;
+}
+.hero .cta h1 {
+    font-size:4rem ;
+    color:#202020
+}
+
+.hero .cta h1 span {
+    background-color:#ffc400 ;
+    padding: 5px;
+}
+.hero .cta p {
+    padding: 20px 0px;
+    font-size: 22px ;
+    color: #555;
+}
+.hero .cta button {
+    padding: 15px 30px;
+    background-color: #0bf9d2;
+    box-shadow: 0 5px #0bf9d2;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+@keyframes pulse{
+    from{
+        transform: scale(0.9);
+        capacity: 0.7;
+    }
+    to {
+        transform: scale (1.1);
+        capacity:1;
+    }
 }
